@@ -1,20 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Base de données : le sujet principal -->
-  <g fill="#d9432f">
-    <ellipse cx="256" cy="96" rx="190" ry="72"/>
-    <rect x="66" y="96" width="380" height="288"/>
-    <ellipse cx="256" cy="384" rx="190" ry="72"/>
-  </g>
-  <!-- Strie : signe "base de données" -->
-  <path d="M66 168 C66 208 151 240 256 240 C361 240 446 208 446 168"
-        fill="none" stroke="#fdfbf8" stroke-width="26" stroke-linecap="round"/>
-  <!-- Ancre : ce qui retient la donnée -->
-  <g fill="none" stroke="#fdfbf8" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="256" cy="288" r="22"/>
-    <path d="M256 310 V420"/>
-    <path d="M208 344 H304"/>
-    <path d="M186 378 C186 412 216 432 256 432 C296 432 326 412 326 378"/>
-    <path d="M186 378 L166 400 M186 378 L210 394"/>
-    <path d="M326 378 L346 400 M326 378 L302 394"/>
+  <g stroke="#d9432f" stroke-width="52" stroke-linecap="round">
+    <path d="M232.0 82.0 L430.0 280.0"/>
+    <path d="M157.0 157.0 L355.0 355.0"/>
+    <path d="M82.0 232.0 L280.0 430.0"/>
   </g>
 </svg>
