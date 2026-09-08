@@ -1,0 +1,338 @@
+- generic [active] [ref=e1]:
+  - link "Aller au contenu" [ref=e2] [cursor=pointer]:
+    - /url: "#contenu"
+  - banner [ref=e3]:
+    - generic [ref=e5]:
+      - link "pgpilot" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - generic [aria-hidden] [ref=e7]: ▸
+        - text: pgpilot
+      - navigation "Navigation principale" [ref=e8]:
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "Fonctionnement" [ref=e11] [cursor=pointer]:
+              - /url: "#fonctionnement"
+          - listitem [ref=e12]:
+            - link "CLI" [ref=e13] [cursor=pointer]:
+              - /url: "#cli"
+          - listitem [ref=e14]:
+            - link "Fonctionnalités" [ref=e15] [cursor=pointer]:
+              - /url: "#fonctionnalites"
+        - link "GitHub" [ref=e16] [cursor=pointer]:
+          - /url: https://github.com/theo-mrn/pgpilot
+  - main [ref=e19]:
+    - generic [ref=e22]:
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - generic [ref=e25]: v1.0
+          - generic [ref=e26]: MIT · open source
+        - heading "Backups Postgres K8s, sans toucher au cluster." [level=1] [ref=e27]: BackupsPostgres K8s,sans toucherau cluster.
+        - paragraph [ref=e28]:
+          - text: pgpilot détecte tes instances PostgreSQL dans Kubernetes, génère la config et déploie des CronJobs qui font
+          - code [ref=e29]: pg_dump → S3
+          - text: . Aucun opérateur, aucun sidecar, aucune modification de pod.
+        - generic [ref=e30]:
+          - link "Démarrer en 30 secondes" [ref=e31] [cursor=pointer]:
+            - /url: "#install"
+          - link "Voir le code" [ref=e34] [cursor=pointer]:
+            - /url: https://github.com/theo-mrn/pgpilot
+        - list [ref=e37]:
+          - listitem [ref=e38]: PostgreSQL 14 → 17
+          - listitem [ref=e40]: Aucun sidecar
+          - listitem [ref=e42]: S3 · MinIO
+          - listitem [ref=e44]: Binaire statique
+      - generic [ref=e47]:
+        - generic [ref=e48]: ~ pgpilot — production
+        - generic [ref=e54]: $ pgpilot detect scan du cluster prod-eu-west-1… ✓ 3 instances PostgreSQL · 2 namespaces ├ app/postgres-main pg 16.2 ✓ reachable ├ app/postgres-events pg 15.6 ✓ reachable └ billing/postgres-main pg 16.1 ✓ reachable → ~/.config/pgpilot/backup.yaml $ pgpilot deploy myapp ✓ app/postgres-main (created) ✓ app/postgres-events (created) ✓ billing/postgres-main (created) 3 CronJob(s) déployés. $ pgpilot backup myapp run --wait ▸ postgres-main 412 MB → s3://acme-backups ▸ postgres-events 198 MB → s3://acme-backups ✓ 3 backups terminés en 42s
+    - generic [ref=e58]:
+      - generic [aria-hidden] [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e61]: detect
+          - generic [ref=e62]: ✦
+        - generic [ref=e63]:
+          - generic [ref=e64]: deploy
+          - generic [ref=e65]: ✦
+        - generic [ref=e66]:
+          - generic [ref=e67]: backup
+          - generic [ref=e68]: ✦
+        - generic [ref=e69]:
+          - generic [ref=e70]: restore
+          - generic [ref=e71]: ✦
+        - generic [ref=e72]:
+          - generic [ref=e73]: status
+          - generic [ref=e74]: ✦
+        - generic [ref=e75]:
+          - generic [ref=e76]: pg_dump → S3
+          - generic [ref=e77]: ✦
+        - generic [ref=e78]:
+          - generic [ref=e79]: zéro opérateur
+          - generic [ref=e80]: ✦
+        - generic [ref=e81]:
+          - generic [ref=e82]: zéro sidecar
+          - generic [ref=e83]: ✦
+        - generic [ref=e84]:
+          - generic [ref=e85]: detect
+          - generic [ref=e86]: ✦
+        - generic [ref=e87]:
+          - generic [ref=e88]: deploy
+          - generic [ref=e89]: ✦
+        - generic [ref=e90]:
+          - generic [ref=e91]: backup
+          - generic [ref=e92]: ✦
+        - generic [ref=e93]:
+          - generic [ref=e94]: restore
+          - generic [ref=e95]: ✦
+        - generic [ref=e96]:
+          - generic [ref=e97]: status
+          - generic [ref=e98]: ✦
+        - generic [ref=e99]:
+          - generic [ref=e100]: pg_dump → S3
+          - generic [ref=e101]: ✦
+        - generic [ref=e102]:
+          - generic [ref=e103]: zéro opérateur
+          - generic [ref=e104]: ✦
+        - generic [ref=e105]:
+          - generic [ref=e106]: zéro sidecar
+          - generic [ref=e107]: ✦
+        - generic [ref=e108]:
+          - generic [ref=e109]: detect
+          - generic [ref=e110]: ✦
+        - generic [ref=e111]:
+          - generic [ref=e112]: deploy
+          - generic [ref=e113]: ✦
+        - generic [ref=e114]:
+          - generic [ref=e115]: backup
+          - generic [ref=e116]: ✦
+        - generic [ref=e117]:
+          - generic [ref=e118]: restore
+          - generic [ref=e119]: ✦
+        - generic [ref=e120]:
+          - generic [ref=e121]: status
+          - generic [ref=e122]: ✦
+        - generic [ref=e123]:
+          - generic [ref=e124]: pg_dump → S3
+          - generic [ref=e125]: ✦
+        - generic [ref=e126]:
+          - generic [ref=e127]: zéro opérateur
+          - generic [ref=e128]: ✦
+        - generic [ref=e129]:
+          - generic [ref=e130]: zéro sidecar
+          - generic [ref=e131]: ✦
+        - generic [ref=e132]:
+          - generic [ref=e133]: detect
+          - generic [ref=e134]: ✦
+        - generic [ref=e135]:
+          - generic [ref=e136]: deploy
+          - generic [ref=e137]: ✦
+        - generic [ref=e138]:
+          - generic [ref=e139]: backup
+          - generic [ref=e140]: ✦
+        - generic [ref=e141]:
+          - generic [ref=e142]: restore
+          - generic [ref=e143]: ✦
+        - generic [ref=e144]:
+          - generic [ref=e145]: status
+          - generic [ref=e146]: ✦
+        - generic [ref=e147]:
+          - generic [ref=e148]: pg_dump → S3
+          - generic [ref=e149]: ✦
+        - generic [ref=e150]:
+          - generic [ref=e151]: zéro opérateur
+          - generic [ref=e152]: ✦
+        - generic [ref=e153]:
+          - generic [ref=e154]: zéro sidecar
+          - generic [ref=e155]: ✦
+      - generic [ref=e156]: "Commandes pgpilot : detect, deploy, backup, restore, status."
+    - generic [ref=e158]:
+      - generic [ref=e159]:
+        - generic [ref=e160]:
+          - generic [ref=e161]:
+            - generic [ref=e162]: "01"
+            - generic [ref=e163]: en trois commandes
+          - heading "De zéro à backups, en moins d'une minute." [level=2] [ref=e164]: De zéro à backups,en moins d'une minute.
+        - paragraph [ref=e165]: Aucun opérateur à installer, aucun CRD, aucun Helm chart. pgpilot parle à l'API Kubernetes avec tes droits existants et crée des objets standards que tu peux lire, éditer ou supprimer à la main.
+      - list [ref=e166]:
+        - listitem [ref=e167]:
+          - generic [ref=e169]:
+            - generic [ref=e170]: "01"
+            - generic [ref=e172]:
+              - heading "Détecte tes bases" [level=3] [ref=e173]
+              - generic [ref=e174]: $pgpilot detect
+            - paragraph [ref=e175]: pgpilot lit ta kubeconfig, scanne le cluster et trouve les Services PostgreSQL joignables. Il écrit un backup.yaml prérempli — pas une ligne de YAML à la main.
+        - listitem [ref=e176]:
+          - generic [ref=e178]:
+            - generic [ref=e179]: "02"
+            - generic [ref=e181]:
+              - heading "Déploie les CronJobs" [level=3] [ref=e182]
+              - generic [ref=e183]: $pgpilot deploy myapp
+            - paragraph [ref=e184]: Tu renseignes le schedule, le bucket et la rétention. pgpilot crée un CronJob par base dans le namespace concerné. Rien d'autre ne bouge dans le cluster.
+        - listitem [ref=e185]:
+          - generic [ref=e187]:
+            - generic [ref=e188]: "03"
+            - generic [ref=e190]:
+              - heading "Vérifie, puis oublie" [level=3] [ref=e191]
+              - generic [ref=e192]: $pgpilot backup myapp run --wait
+            - paragraph [ref=e193]: Un backup manuel pour confirmer que le dump part bien vers S3. Ensuite le cron prend le relais, et status te dit en une ligne si tout tourne.
+    - generic [ref=e195]:
+      - generic [ref=e196]:
+        - generic [ref=e197]:
+          - generic [ref=e198]:
+            - generic [ref=e199]: "02"
+            - generic [ref=e200]: la CLI
+          - heading "Cinq commandes. C'est tout." [level=2] [ref=e201]: Cinq commandes.C'est tout.
+        - paragraph [ref=e202]:
+          - text: pgpilot reste petit par choix. Le comportement vit dans ton
+          - code [ref=e203]: backup.yaml
+          - text: ", versionné dans ton repo — pas dans une console web."
+      - generic [ref=e204]:
+        - tablist "Commandes pgpilot" [ref=e205]:
+          - list [ref=e206]:
+            - listitem [ref=e207]:
+              - tab "detect Scanne le cluster, génère backup.yaml" [selected] [ref=e208] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e209]: $
+                - generic [ref=e210]:
+                  - generic [ref=e211]: detect
+                  - generic [ref=e212]: Scanne le cluster, génère backup.yaml
+            - listitem [ref=e213]:
+              - tab "deploy Crée un CronJob par base" [ref=e214] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e215]: $
+                - generic [ref=e216]:
+                  - generic [ref=e217]: deploy
+                  - generic [ref=e218]: Crée un CronJob par base
+            - listitem [ref=e219]:
+              - tab "backup Déclenche un dump, pousse vers S3" [ref=e220] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e221]: $
+                - generic [ref=e222]:
+                  - generic [ref=e223]: backup
+                  - generic [ref=e224]: Déclenche un dump, pousse vers S3
+            - listitem [ref=e225]:
+              - tab "restore Restaure depuis une archive S3" [ref=e226] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e227]: $
+                - generic [ref=e228]:
+                  - generic [ref=e229]: restore
+                  - generic [ref=e230]: Restaure depuis une archive S3
+            - listitem [ref=e231]:
+              - tab "status État des CronJobs déployés" [ref=e232] [cursor=pointer]:
+                - generic [aria-hidden] [ref=e233]: $
+                - generic [ref=e234]:
+                  - generic [ref=e235]: status
+                  - generic [ref=e236]: État des CronJobs déployés
+        - tabpanel "detect Scanne le cluster, génère backup.yaml" [ref=e237]:
+          - generic [ref=e238]:
+            - generic [ref=e239]: pgpilot detect
+            - generic [ref=e246]:
+              - generic [ref=e247]: $pgpilot detect
+              - generic [ref=e248]: scan du cluster prod-eu-west-1…
+              - generic [ref=e251]:
+                - text: ✓
+                - generic [ref=e252]: 3 instances PostgreSQL trouvées
+              - generic [ref=e254]: NAMESPACE SERVICE VERSION ÉTAT
+              - generic [ref=e255]:
+                - text: app postgres-main pg 16.2
+                - generic [ref=e256]:
+                  - text: ✓
+                  - generic [ref=e257]: reachable
+              - generic [ref=e258]:
+                - text: app postgres-events pg 15.6
+                - generic [ref=e259]:
+                  - text: ✓
+                  - generic [ref=e260]: reachable
+              - generic [ref=e261]:
+                - text: billing postgres-main pg 16.1
+                - generic [ref=e262]:
+                  - text: ✓
+                  - generic [ref=e263]: reachable
+              - generic [ref=e265]: "→ config écrite : ~/.config/pgpilot/backup.yaml"
+              - generic [ref=e266]: → renseigne ton bucket S3 et tes credentials
+    - generic [ref=e268]:
+      - generic [ref=e269]:
+        - generic [ref=e270]:
+          - generic [ref=e271]:
+            - generic [ref=e272]: "03"
+            - generic [ref=e273]: fonctionnalités
+          - heading "Ce qu'il fait, et rien de plus." [level=2] [ref=e274]: Ce qu'il fait,et rien de plus.
+        - paragraph [ref=e275]: Sauvegarder et restaurer des bases PostgreSQL dans Kubernetes. Pas de dashboard, pas de télémétrie, pas de compte à créer.
+      - generic [ref=e276]:
+        - article [ref=e277]:
+          - generic [ref=e278]:
+            - generic [ref=e279]:
+              - generic [ref=e280]: A
+              - heading "Détection automatique" [level=3] [ref=e281]
+            - paragraph [ref=e282]: pgpilot inspecte les Services du cluster, teste la joignabilité et relève la version de chaque instance. La config sort préremplie.
+            - generic [ref=e283]: app/postgres-main pg 16.2 app/postgres-events pg 15.6 billing/postgres-main pg 16.1
+        - article [ref=e284]:
+          - generic [ref=e285]:
+            - generic [ref=e286]:
+              - generic [ref=e287]: B
+              - heading "Config déclarative" [level=3] [ref=e288]
+            - paragraph [ref=e289]: "Schedule, rétention, bucket, credentials : un seul fichier YAML par environnement, versionnable dans ton repo."
+            - generic [ref=e290]: "schedule: '0 2 * * *' retention: 7d bucket: acme-backups endpoint: minio.internal"
+        - article [ref=e291]:
+          - generic [ref=e292]:
+            - generic [ref=e293]:
+              - generic [ref=e294]: C
+              - heading "Secrets jamais en clair" [level=3] [ref=e295]
+            - paragraph [ref=e296]: Les credentials référencent tes Secrets Kubernetes existants. pgpilot ne les lit pas et ne les écrit nulle part.
+            - generic [ref=e297]: "db_password: from: k8s-secret://app/env#DB_PASSWORD"
+        - article [ref=e298]:
+          - generic [ref=e299]:
+            - generic [ref=e300]:
+              - generic [ref=e301]: D
+              - heading "Restore interactif" [level=3] [ref=e302]
+            - paragraph [ref=e303]: Liste les archives d'une base, choisis un point de restauration, confirme. pgpilot lance un Job et suit son exécution.
+            - generic [ref=e304]: ▸ 20260908T030000Z.dump.gz 412 MB 20260907T030000Z.dump.gz 398 MB
+        - article [ref=e305]:
+          - generic [ref=e306]:
+            - generic [ref=e307]:
+              - generic [ref=e308]: E
+              - heading "S3 et MinIO" [level=3] [ref=e309]
+            - paragraph [ref=e310]: AWS S3, ou n'importe quel stockage compatible via un endpoint custom. Un champ à changer, rien d'autre.
+            - generic [ref=e311]: s3://acme-backups/myapp/postgres/
+        - generic [ref=e312]:
+          - generic [ref=e313]: et surtout
+          - paragraph [ref=e314]: Rien qui tourne en permanence dans ton cluster.
+          - paragraph [ref=e315]: Des CronJobs Kubernetes standards. Si tu désinstalles pgpilot, tes backups continuent.
+    - generic [ref=e318]:
+      - generic [ref=e319]:
+        - generic [ref=e320]:
+          - generic [ref=e321]: "04"
+          - generic [ref=e322]: installation
+        - heading "Un binaire. Rien à signer." [level=2] [ref=e323]: Un binaire.Rien à signer.
+        - paragraph [ref=e324]: Pas de runtime, pas de compte, pas de plan tarifaire. Télécharge, rends exécutable, lance.
+      - generic [ref=e325]:
+        - generic [ref=e326]:
+          - generic [ref=e327]:
+            - generic [ref=e328]: macOS · arm64
+            - button "copier" [ref=e329] [cursor=pointer]
+          - generic [ref=e330]: $curl -L github.com/theo-mrn/pgpilot/releases/latest/… -o /usr/local/bin/pgpilot && chmod +x /usr/local/bin/pgpilot
+        - list [ref=e332]:
+          - listitem [ref=e333]: macOS arm64
+          - listitem [ref=e335]: macOS amd64
+          - listitem [ref=e337]: Linux amd64
+          - listitem [ref=e339]: Linux arm64
+        - generic [ref=e341]:
+          - link "Star sur GitHub" [ref=e342] [cursor=pointer]:
+            - /url: https://github.com/theo-mrn/pgpilot
+          - link "Toutes les releases" [ref=e345] [cursor=pointer]:
+            - /url: https://github.com/theo-mrn/pgpilot/releases
+  - contentinfo [ref=e346]:
+    - generic [ref=e347]:
+      - generic [ref=e348]:
+        - generic [aria-hidden] [ref=e349]: ▸
+        - text: pgpilot
+      - navigation "Liens de pied de page" [ref=e350]:
+        - list [ref=e351]:
+          - listitem [ref=e352]:
+            - link "github" [ref=e353] [cursor=pointer]:
+              - /url: https://github.com/theo-mrn/pgpilot
+          - listitem [ref=e354]:
+            - link "releases" [ref=e355] [cursor=pointer]:
+              - /url: https://github.com/theo-mrn/pgpilot/releases
+          - listitem [ref=e356]:
+            - link "cli" [ref=e357] [cursor=pointer]:
+              - /url: "#cli"
+          - listitem [ref=e358]:
+            - link "install" [ref=e359] [cursor=pointer]:
+              - /url: "#install"
+      - paragraph [ref=e360]: MIT · pour les sysadmins fatigués
+  - button "Open Next.js Dev Tools" [ref=e366] [cursor=pointer]

@@ -1,26 +1,191 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================
+   pgpilot — Design System "Encre & Vermillon"
+   Éditorial suisse / revue technique imprimée, ton adouci.
+   Règles : pas de gradient, pas de glow, pas de blur décoratif.
+   La hiérarchie vient de la typo, des filets fins, des surfaces
+   et d'ombres portées discrètes.
+   ============================================================ */
+
+@theme {
+  /* — Encre & papier — */
+  --color-paper: #fdfbf8;
+  --color-paper-2: #f6f2ec;
+  --color-paper-3: #ece6dd;
+  --color-ink: #23201c;
+  --color-ink-2: #4a443c;
+  --color-ink-3: #7d746a;
+
+  /* — Accent unique — */
+  --color-vermillon: #d9432f;
+  --color-vermillon-ink: #b4210f;
+
+  /* — Sémantique terminal — */
+  --color-signal: #1c7f4d;
+  --color-warn: #b06a00;
+
+  /* — Filets — */
+  --color-rule: #d9d1c4;
+  --color-rule-soft: #e4ded3;
+
+  /* — Typo — */
+  --font-display: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+  --font-sans: var(--font-archivo), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-mono-stack), ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* — Échelle éditoriale — */
+  --text-mega: clamp(2.75rem, min(9vw, 13vh), 6.5rem);
+  --text-mega--line-height: 0.94;
+  --text-mega--letter-spacing: -0.03em;
+  --text-giga: clamp(2.25rem, 6vw, 4.5rem);
+  --text-giga--line-height: 1.02;
+  --text-giga--letter-spacing: -0.025em;
+
+  --radius-none: 0px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* — Ombres : portées douces, jamais de glow — */
+  --shadow-soft: 0 1px 2px rgb(35 32 28 / 0.04), 0 4px 12px rgb(35 32 28 / 0.05);
+  --shadow-lift: 0 2px 4px rgb(35 32 28 / 0.05), 0 10px 28px rgb(35 32 28 / 0.07);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* — Base — */
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "kern" 1, "liga" 1, "cv05" 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Chiffres tabulaires : les colonnes de données ne dansent pas */
+.tnum,
+table,
+.font-mono {
+  font-variant-numeric: tabular-nums;
+}
+
+/* — Focus visible : obligatoire, jamais retiré — */
+:focus-visible {
+  outline: 2px solid var(--color-vermillon);
+  outline-offset: 2px;
+}
+
+/* — Sélection — */
+::selection {
+  background: var(--color-vermillon);
+  color: var(--color-paper);
+}
+
+/* — Grain papier : très subtil, purement texturel — */
+.grain::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* — Marquee (bandeau défilant) — */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+/* — Apparition au scroll — */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.reveal {
+  animation: rise 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) backwards;
+}
+
+/* — Ligne de terminal — */
+@keyframes line-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.line-in {
+  animation: line-in 0.28s ease backwards;
+}
+
+/* — Flux le long des liaisons du schéma de topologie — */
+@keyframes wire-pulse {
+  from {
+    stroke-dashoffset: 240;
+  }
+  to {
+    stroke-dashoffset: -240;
+  }
+}
+.wire-pulse {
+  stroke-dasharray: 48 192;
+  animation: wire-pulse 4.5s linear infinite;
+}
+
+/* — Curseur bloc — */
+@keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+.cursor-block {
+  animation: blink 1.05s steps(1) infinite;
+}
+
+/* — Accessibilité : mouvement réduit — */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .animate-marquee {
+    animation: none;
+  }
+  .wire-pulse {
+    animation: none;
+  }
 }
