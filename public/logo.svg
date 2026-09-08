@@ -1,13 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <g fill="none" stroke="#d9432f" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
-    <!-- base de données : ce que l'ancre retient -->
-    <ellipse cx="256" cy="106" rx="76" ry="30"/>
-    <path d="M180 106 V166 C180 183 214 196 256 196 C298 196 332 183 332 166 V106"/>
-    <!-- ancre -->
-    <path d="M256 196 V446"/>
-    <path d="M154 268 H358"/>
-    <path d="M104 344 C104 416 172 456 256 456 C340 456 408 416 408 344"/>
-    <path d="M104 344 L62 388 M104 344 L152 380"/>
-    <path d="M408 344 L450 388 M408 344 L360 380"/>
+  <!-- Base de données : le sujet principal -->
+  <g fill="#d9432f">
+    <ellipse cx="256" cy="96" rx="190" ry="72"/>
+    <rect x="66" y="96" width="380" height="288"/>
+    <ellipse cx="256" cy="384" rx="190" ry="72"/>
+  </g>
+  <!-- Strie : signe "base de données" -->
+  <path d="M66 168 C66 208 151 240 256 240 C361 240 446 208 446 168"
+        fill="none" stroke="#fdfbf8" stroke-width="26" stroke-linecap="round"/>
+  <!-- Ancre : ce qui retient la donnée -->
+  <g fill="none" stroke="#fdfbf8" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="256" cy="288" r="22"/>
+    <path d="M256 310 V420"/>
+    <path d="M208 344 H304"/>
+    <path d="M186 378 C186 412 216 432 256 432 C296 432 326 412 326 378"/>
+    <path d="M186 378 L166 400 M186 378 L210 394"/>
+    <path d="M326 378 L346 400 M326 378 L302 394"/>
   </g>
 </svg>
