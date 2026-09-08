@@ -1,18 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <circle cx="256" cy="256" r="256" fill="#d9432f"/>
-  
-  <g fill="none" stroke="#fdfbf8" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M256 92 L286 109 L286 145 L256 162 L226 145 L226 109 Z"/>
-    <path d="M256 162 V192"/>
-    <path d="M180 192 H332"/>
-    <path d="M256 326 V424"/>
-    <path d="M144 318 C144 386 194 422 256 422 C318 422 368 386 368 318"/>
-    <path d="M144 318 L114 354 M144 318 L180 346"/>
-    <path d="M368 318 L398 354 M368 318 L332 346"/>
+  <!-- Base de données : ce que l'ancre retient -->
+  <g fill="#fdfbf8">
+    <ellipse cx="256" cy="132" rx="64" ry="26"/>
+    <rect x="192" y="132" width="128" height="52"/>
+    <ellipse cx="256" cy="184" rx="64" ry="26"/>
   </g>
-  <g stroke="#fdfbf8" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" fill="#d9432f">
-    <path d="M202 240 V296 C202 310 226 320 256 320 C286 320 310 310 310 296 V240"/>
-    <ellipse cx="256" cy="240" rx="54" ry="22"/>
-    <path d="M202 274 C202 288 226 298 256 298 C286 298 310 288 310 274" fill="none"/>
+  <path d="M192 158 C192 172 220 183 256 183 C292 183 320 172 320 158"
+        fill="none" stroke="#d9432f" stroke-width="13" stroke-linecap="round"/>
+  <!-- Ancre -->
+  <g fill="none" stroke="#fdfbf8" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 210 V400"/>
+    <path d="M186 268 H326"/>
+    <path d="M152 322 C152 378 196 408 256 408 C316 408 360 378 360 322"/>
+    <path d="M152 322 L122 354 M152 322 L186 348"/>
+    <path d="M360 322 L390 354 M360 322 L326 348"/>
   </g>
 </svg>

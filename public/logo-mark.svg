@@ -1,16 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
   <circle cx="256" cy="256" r="256" fill="#d9432f"/>
-  <g fill="none" stroke="#fdfbf8" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M256 96 L288 114 L288 150 L256 168 L224 150 L224 114 Z"/>
-    <path d="M256 168 V196"/>
-    <path d="M174 196 H338"/>
-    <path d="M256 330 V420"/>
-    <path d="M140 316 C140 388 192 424 256 424 C320 424 372 388 372 316"/>
-    <path d="M140 316 L108 354 M140 316 L178 346"/>
-    <path d="M372 316 L404 354 M372 316 L334 346"/>
+  <g fill="#fdfbf8">
+    <ellipse cx="256" cy="140" rx="72" ry="28"/>
+    <rect x="184" y="140" width="144" height="48"/>
+    <ellipse cx="256" cy="188" rx="72" ry="28"/>
   </g>
-  <g stroke="#fdfbf8" stroke-width="42" stroke-linecap="round" stroke-linejoin="round" fill="#d9432f">
-    <path d="M206 242 V294 C206 308 228 318 256 318 C284 318 306 308 306 294 V242"/>
-    <ellipse cx="256" cy="242" rx="50" ry="20"/>
+  <g fill="none" stroke="#fdfbf8" stroke-width="44" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M256 214 V394"/>
+    <path d="M180 272 H332"/>
+    <path d="M148 318 C148 376 194 406 256 406 C318 406 364 376 364 318"/>
+    <path d="M148 318 L116 352 M148 318 L182 346"/>
+    <path d="M364 318 L396 352 M364 318 L330 346"/>
   </g>
 </svg>
