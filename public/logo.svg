@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <rect width="512" height="512" fill="#fdfbf8"/>
+  <g fill="none" stroke="#d9432f" stroke-width="28"
+     stroke-linecap="round" stroke-linejoin="round">
+    <!-- anneau hexagonal -->
+    <path d="M256 40 L294 62 L294 106 L256 128 L218 106 L218 62 Z"/>
+    <!-- hampe haute -->
+    <path d="M256 128 V170"/>
+    <!-- jas (barre horizontale) -->
+    <path d="M154 170 H358"/>
+    <!-- hampe basse : part sous le disque -->
+    <path d="M256 320 V430"/>
+    <!-- bras de l'ancre -->
+    <path d="M108 306 C108 400 176 444 256 444 C336 444 404 400 404 306"/>
+    <!-- pattes -->
+    <path d="M108 306 L70 352 M108 306 L154 342"/>
+    <path d="M404 306 L442 352 M404 306 L358 342"/>
+  </g>
+  <!-- disque base de données : entre le jas et la hampe basse -->
+  <g stroke="#d9432f" stroke-width="24" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M196 214 V292 C196 306 223 316 256 316 C289 316 316 306 316 292 V214" fill="#fdfbf8"/>
+    <ellipse cx="256" cy="214" rx="60" ry="24" fill="#fdfbf8"/>
+    <path d="M196 256 C196 270 223 280 256 280 C289 280 316 270 316 256" fill="none"/>
+  </g>
+</svg>
