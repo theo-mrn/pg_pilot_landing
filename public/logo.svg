@@ -1,19 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <circle cx="256" cy="256" r="256" fill="#d9432f"/>
-  <!-- Base de données : ce que l'ancre retient -->
-  <g fill="#fdfbf8">
-    <ellipse cx="256" cy="132" rx="64" ry="26"/>
-    <rect x="192" y="132" width="128" height="52"/>
-    <ellipse cx="256" cy="184" rx="64" ry="26"/>
-  </g>
-  <path d="M192 158 C192 172 220 183 256 183 C292 183 320 172 320 158"
-        fill="none" stroke="#d9432f" stroke-width="13" stroke-linecap="round"/>
-  <!-- Ancre -->
-  <g fill="none" stroke="#fdfbf8" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M256 210 V400"/>
-    <path d="M186 268 H326"/>
-    <path d="M152 322 C152 378 196 408 256 408 C316 408 360 378 360 322"/>
-    <path d="M152 322 L122 354 M152 322 L186 348"/>
-    <path d="M360 322 L390 354 M360 322 L326 348"/>
+  <g fill="none" stroke="#d9432f" stroke-width="34" stroke-linecap="round" stroke-linejoin="round">
+    <!-- base de données : ce que l'ancre retient -->
+    <ellipse cx="256" cy="106" rx="76" ry="30"/>
+    <path d="M180 106 V166 C180 183 214 196 256 196 C298 196 332 183 332 166 V106"/>
+    <!-- ancre -->
+    <path d="M256 196 V446"/>
+    <path d="M154 268 H358"/>
+    <path d="M104 344 C104 416 172 456 256 456 C340 456 408 416 408 344"/>
+    <path d="M104 344 L62 388 M104 344 L152 380"/>
+    <path d="M408 344 L450 388 M408 344 L360 380"/>
   </g>
 </svg>
